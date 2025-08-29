@@ -14,9 +14,9 @@ const FormDataSchema = new Schema(
     credentials: { type: [String], default: [] ,  required: true},
     insurance: { type: [String], default: []  ,  required: true},
     canSeePatientsInde: { type: String ,  required: true },
-    malpractiveInsurance: { type: String ,  required: true},
-    payPerAppointmentModel: { type: String ,  required: true },
-    ehr_emr_system: { type: String  ,  required: true},
+    malpractiveInsurance: { type: String},
+    payPerAppointmentModel: { type: String},
+    ehr_emr_system: { type: String},
     practiceState: { type: [String], default: []  ,  required: true},
   },
   { timestamps: true }
@@ -24,4 +24,5 @@ const FormDataSchema = new Schema(
 
 
 
-export default mongoose.model('FormData' ,FormDataSchema)
+const FromDataModel = mongoose.model('FormData' ,FormDataSchema)
+export default FromDataModel
